@@ -31,7 +31,13 @@ public class Book {
             return false;
         }
         Book c2 = (Book) other;
-        return bookName.equals(c2.bookName);
+        if (getPublishingYear() != c2.getPublishingYear()) {
+            return false;
+        }
+        if (!author.equals(c2.author)){
+            return false;
+        }
+        return getBookName().equals(c2.getBookName());
     }
 
     @Override

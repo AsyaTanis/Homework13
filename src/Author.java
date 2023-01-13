@@ -23,10 +23,10 @@ public class Author {
             return false;
         }
         Author c2 = (Author) other;
-        return authorSecondName.equals(c2.authorSecondName);
+        return getAuthorFirstName().equals(c2.getAuthorFirstName()) && getAuthorSecondName().equals(c2.getAuthorSecondName());
     }
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(authorSecondName);
+        return java.util.Objects.hash(authorFirstName + authorSecondName);
     }
 }
